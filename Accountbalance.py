@@ -6,10 +6,13 @@ from solana.rpc.api import Client
 from solders.pubkey import Pubkey
 
 load_dotenv()
+
 wallet = Pubkey.from_string(os.getenv('PUB_KEY_1'))
 wallet2 = Pubkey.from_string(os.getenv('PUB_KEY_2'))
 solana_client = Client(os.getenv('RPC_ENDPOINT'))
 file_csv = os.getenv('FILE_CSV')
+
+#Current date & time 
 now = datetime.datetime.now()
 year = '{:02d}'.format(now.year)
 month = '{:02d}'.format(now.month)
